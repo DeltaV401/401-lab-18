@@ -18,14 +18,3 @@ server.on('connection', socket => {
     server.emit('chat', data);
   });
 });
-
-function dataHandler(buffer) {
-  let id = this.id;
-  console.log(id, buffer.toString());
-
-  for(let socketId in socketPool) {
-    if(socketId === id) continue;
-
-    socketPool[socketId].write(`${id}: ${buffer.toString()}\r\n`);
-  };
-};
