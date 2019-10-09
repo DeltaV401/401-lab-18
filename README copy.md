@@ -1,8 +1,8 @@
-# LAB 18
+# LAB - 
 
-## Socket.io Implementation
+## Project Name
 
-### Jon Struve
+### Author: Student/Group Name
 
 ### Links and Resources
 * [submission PR](http://xyz.com)
@@ -41,3 +41,6 @@ Usage Notes or examples
 * How do you run tests?
 * What assertions were made?
 * What assertions need to be / should be made?
+
+#### UML
+Link to an image of the UML for your application and response to events
