@@ -1,16 +1,11 @@
-const net = require('net');
-const client = new net.Socket();
+const socketIoClient = require('socket.io-client');
 
-const PORT = process.env.PORT || 3000;
+const URL = process.env.URL || 'http://localhost:3000';
 
-client.connect(PORT, 'localhost', () => {
-  console.log(`Running on ${PORT}`);
-});
+const client = socketIoClient.connect(URL);
 
-client.on('data', data => {
-  console.log('log', data.toString());
-});
+console.log(`Listening through ${URL}.`);
 
-client.on('close', () => {
-  console.log('Goodbye human.');
+client.on('chat', data => {
+  console.log('CHAT', data.toString());
 });
